@@ -1,36 +1,44 @@
+// App.js
 import React from 'react';
 
-const App = () => {
+function App() {
+  const styles = {
+    body: {
+      fontFamily: 'Arial, sans-serif',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh',
+      margin: 0,
+      backgroundColor: '#f2f2f2',
+    },
+    container: {
+      textAlign: 'center',
+      padding: '40px',
+      backgroundColor: 'white',
+      borderRadius: '8px',
+      boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
+    },
+    heading: {
+      color: '#d9534f',
+    },
+    paragraph: {
+      fontSize: '1.2em',
+      color: '#555',
+    },
+  };
+
   return (
     <div style={styles.body}>
-      <div style={styles.message}>
-        <h1 style={styles.heading}>Website is under maintenance</h1>
-        <p>We are currently performing maintenance. Please check back later.</p>
+      <div style={styles.container}>
+        <h1 style={styles.heading}>Maintenance Mode</h1>
+        <p style={styles.paragraph}>
+          Our site is currently undergoing scheduled maintenance. We will be back
+          shortly. Thank you for your patience!
+        </p>
       </div>
     </div>
   );
-};
-
-const styles = {
-  body: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    backgroundColor: '#f0f0f0',
-    fontFamily: 'Arial, sans-serif',
-  },
-  message: {
-    backgroundColor: '#ffffff',
-    padding: '20px',
-    border: '2px solid #cccccc',
-    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center',
-  },
-  heading: {
-    color: '#333',
-    fontSize: '24px',
-  },
-};
+}
 
 export default App;
